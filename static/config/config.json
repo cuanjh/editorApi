@@ -1,0 +1,80 @@
+{
+  "system": {
+    "useMultipoint": false,
+    "env": "release"
+  },
+  "jwt": {
+    "signingKey": "qmPlus"
+  },
+  "mysqlAdmin": {
+    "username": "root",
+    "password": "zaq1xsw2",
+    "path": "127.0.0.1:3306",
+    "dbname": "qmplus",
+    "config": "charset=utf8&parseTime=True&loc=Local"
+  },
+  "redisAdmin": {
+    "addr": "127.0.0.1:6379",
+    "password": "",
+    "DB": 0
+  },
+  "qiniu": {
+    "accessKey": "QmcneZPBfrRri8K5SNQXSHdidSez2Z9Vqoz9ixfK",
+    "secretKey": "oNbjS4XgHEx_mz5DM_JpjLU7CoZWqQZllfoTbk3T"
+  },
+  "tencent": {
+    "SecretId": "AKID0EjzjDEvud5SGoEZFfpkOmtlNrrcPBiy",
+    "SecretKey": "C8ofGMK2TmqdbKnxqTcV7mBLMUMxIMIy",
+    "Region": "ap-guangzhou",
+    "SdkAppId": 1400407516,
+    "SdkAppKey": "398dfb56da3f0ff1d25ccf2b593c2cbf8af1dc70892cde424b622cd2c088e3c7",
+    "AppId": 1256506001,
+    "BizId": 92229,
+    "CallbackKey": "talkmate",
+    "TranscodeFileCallbackUrl": "http://dev.api.talkmate.com:8866/baiban/course_files/transcode_callback",
+    "TranscodeVideoCallbackUrl": "http://dev.api.talkmate.com:8866/baiban/course_files/transcode_callback",
+    "OwnerAccount": "administrator"
+  },
+  "mongodb": {
+    "hosts": "test.200h.com:27017",
+    "user": "",
+    "passwd": "",
+    "replicaSet": "",
+    "poolLimit": 20,
+    "readReferer": ""
+  },
+  "tomongodb": {
+    "hosts": "test.200h.com:27017",
+    "user": "",
+    "passwd": "",
+    "replicaSet": "",
+    "poolLimit": 2,
+    "readReferer": ""
+  },
+  "testmongodb": {
+    "hosts": "test.200h.com:27017",
+    "user": "",
+    "passwd": "",
+    "replicaSet": "",
+    "poolLimit": 20,
+    "readReferer": ""
+  },
+  "natsConfig": {
+    "hosts": "nats://127.0.0.1:4222"
+  },
+  "casbinConfig": {
+    "modelPath": "./static/rbacmodel/rbac_model.conf"
+  },
+  "courseConfig": {
+    "assetsUrl": "https://course-assets1.talkmate.com/"
+  },
+  "uploadConfig": {
+    "UploadAssets": "https://uploadfile1.talkmate.com/"
+  },
+  "liveCourseConfig": {
+    "livePushDomain": "testpush.talkmate.com",
+    "livePushDomainKey": "42e30e51fc72571a5d7010c3d4dc450c",
+    "livePullDomain": "livepull.talkmate.com",
+    "livePullDomainKey": "42e30e51fc72571a5d7010c3d4dc450c"
+  }
+}

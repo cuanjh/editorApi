@@ -1,0 +1,7 @@
+/editorAPILinux
+/log
+!/log/readMe.txt
+/.idea/
+/editorApi
+!static/excel
+/data/*

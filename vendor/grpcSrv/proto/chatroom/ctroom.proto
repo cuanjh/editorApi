@@ -1,0 +1,54 @@
+syntax = "proto3";
+package chatroom;
+
+//发送短信服务
+service Chatroom {
+    rpc Create (Request) returns (Response);
+    rpc Distroy (DistroyRequest) returns (Response);
+    rpc GagAdd (GagAddRequest) returns (Response);
+    rpc GagRemove (GagRemoveRequest) returns (Response);
+}
+
+//通知请求数据结构
+message ctroom {
+    string id = 1;
+    string name = 2;
+}
+message Request {
+    repeated ctroom rooms = 1;
+}
+
+message DistroyRequest {
+    repeated string ids = 1;
+}
+
+//发送响应数据结构
+message Response {
+    int32 code = 2;
+    string msg = 3;
+}
+
+message QueryResponse {
+    message roomInfo {
+        string chrmId = 1;
+        string name = 2;
+        string timeStr = 3;
+    }
+    repeated roomInfo rooms = 1;
+}
+
+message JoinRequest {
+    repeated string userIds = 1;
+    string chatroomId = 2;
+}
+
+message GagAddRequest {
+    repeated string userIds = 1; //用户 Id，可同时禁言多个用户，最多不超过 20 个
+    string chatroomId = 2; //聊天室 Id
+    int32 minute = 3; //禁言时长，以分钟为单位，最大值为43200分钟。
+}
+
+message GagRemoveRequest {
+    repeated string userIds = 1;
+    string chatroomId = 2;
+}

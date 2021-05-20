@@ -1,0 +1,36 @@
+syntax = "proto3";
+package im;
+
+
+//消息服务
+service Msg {
+	rpc Publish(Request) returns (Response);
+	rpc System(Request) returns (Response);
+	rpc Broadcast(Request) returns (Response);
+	rpc Custom(Request) returns (Response);
+	rpc Chatroom(Request) returns (Response);
+	rpc ChatroomCustome(Request) returns (Response);
+}
+
+//发送信息请求数据结构
+message Request {
+	 string fromUserId = 1;
+	 repeated string toUids = 2;
+	 string content = 3;
+	 string pushContent = 4;
+	 string pushData = 5;
+	 string msgType = 6;
+	 string extraData = 7;
+	 repeated string tags = 8;
+	 int64 duration = 9;
+	 string userInfo = 10;
+}
+
+//发送响应数据结构
+message Response {
+	int32 code = 2;
+	string msg = 3;
+}
+
+
+

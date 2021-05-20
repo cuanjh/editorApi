@@ -1,0 +1,7640 @@
+basePath: /
+definitions:
+  api.AddMenuAuthorityInfo:
+    properties:
+      authorityId:
+        type: string
+      menus:
+        items:
+          $ref: '#/definitions/sysModel.SysBaseMenu'
+        type: array
+    type: object
+  api.AuthorityIdInfo:
+    properties:
+      authorityId:
+        type: string
+    type: object
+  api.ChangePasswordStutrc:
+    properties:
+      newPassword:
+        type: string
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+  api.CreateApiParams:
+    properties:
+      description:
+        type: string
+      path:
+        type: string
+    type: object
+  api.CreateAuthorityParams:
+    properties:
+      authorityId:
+        type: string
+      authorityName:
+        type: string
+    type: object
+  api.DeleteAuthorityPatams:
+    properties:
+      authorityId:
+        type: integer
+    type: object
+  api.GetById:
+    properties:
+      id:
+        type: number
+    type: object
+  api.IdInfo:
+    properties:
+      id:
+        type: number
+    type: object
+  api.RegistAndLoginStuct:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+  api.SetUserAuth:
+    properties:
+      authorityId:
+        type: string
+      uuid:
+        type: string
+    type: object
+  api.UserDeleteStutrc:
+    properties:
+      uuid:
+        type: string
+    type: object
+  dbModel.ExaFileUploadAndDownload:
+    properties:
+      key:
+        type: string
+      name:
+        type: string
+      tag:
+        type: string
+      url:
+        type: string
+    type: object
+  editor.Content_tags:
+    properties:
+      cover:
+        items:
+          type: string
+        type: array
+      desc:
+        type: string
+      flag:
+        items:
+          type: string
+        type: array
+      has_changed:
+        type: boolean
+      has_del:
+        type: boolean
+      key:
+        type: string
+      list_order:
+        type: integer
+      name:
+        type: string
+      title:
+        type: string
+      type:
+        type: string
+    type: object
+  editor.DiscoverChannel:
+    properties:
+      icon:
+        type: string
+      isDel:
+        type: boolean
+      isShow:
+        type: boolean
+      listOrder:
+        type: integer
+      showPos:
+        type: string
+      title:
+        additionalProperties:
+          type: string
+        type: object
+      uuid:
+        type: string
+    type: object
+  editor.LiveCourse:
+    properties:
+      EndTime:
+        type: integer
+      courseCode:
+        type: string
+      cover:
+        type: string
+      date:
+        type: string
+      finishInfo:
+        type: string
+      finishTitle:
+        type: string
+      isDel:
+        type: boolean
+      lanCode:
+        type: string
+      listOrder:
+        type: integer
+      livePullUrl:
+        type: string
+      livePushUrl:
+        type: string
+      online_number:
+        type: integer
+      realEndTime:
+        type: integer
+      realStartTime:
+        type: integer
+      roomId:
+        type: integer
+      startTime:
+        type: integer
+      state:
+        type: integer
+      title:
+        type: string
+      uuid:
+        type: string
+      videoCover:
+        type: string
+      videoUrl:
+        type: string
+      weixinNo:
+        type: string
+    type: object
+  editor.LiveEditRoom:
+    properties:
+      code:
+        type: string
+      cover:
+        type: string
+      cover_v2:
+        type: string
+      description:
+        type: string
+      free_for_member:
+        type: number
+      lan_code:
+        type: string
+      liveInfo:
+        $ref: '#/definitions/editor.LiveInfo'
+        type: object
+      module_name:
+        type: string
+      money:
+        type: number
+      money_type:
+        type: string
+      moneyDiscount:
+        type: number
+      tag_keys:
+        items:
+          type: string
+        type: array
+      update_time:
+        type: string
+      user_id:
+        type: string
+    type: object
+  editor.LiveInfo:
+    properties:
+      baseRand:
+        description: 初始值
+        type: integer
+      basicChapterCover:
+        type: string
+      basicContentLevel:
+        type: string
+      basicCourseCode:
+        description: 课程编码
+        type: string
+      basicProfilePhoto:
+        description: 头像
+        type: string
+      courseCode:
+        type: string
+      courseNum:
+        type: integer
+      dateNotice:
+        description: 直播日期描述
+        type: string
+      disTechPhoto:
+        description: 直播课发现首页头像
+        type: string
+      endDate:
+        type: string
+      endTime:
+        type: string
+      exclude_dates:
+        items:
+          type: string
+        type: array
+      finishInfo:
+        type: string
+      finishTitle:
+        type: string
+      level:
+        description: 课程级别
+        type: integer
+      liveUserUUID:
+        type: string
+      online:
+        type: boolean
+      posters:
+        items:
+          type: string
+        type: array
+      realEndTime:
+        type: integer
+      realStartTime:
+        type: integer
+      shareBgUrl:
+        type: string
+      shareDesc:
+        type: string
+      sharePoster:
+        items:
+          type: string
+        type: array
+      shareTitle:
+        type: string
+      startDate:
+        type: string
+      startTime:
+        type: string
+      tech_desc:
+        type: string
+      tech_name:
+        type: string
+      tech_photo:
+        type: string
+      uuid:
+        type: string
+      videoCoverUrl:
+        type: string
+      videoUrl:
+        type: string
+      weekDays:
+        items:
+          type: string
+        type: array
+      weixinNo:
+        type: string
+    type: object
+  editor.LiveRoom:
+    properties:
+      buy_num:
+        type: integer
+      code:
+        type: string
+      course_type:
+        type: integer
+      cover:
+        type: string
+      cover_v2:
+        type: string
+      created_on:
+        type: string
+      description:
+        type: string
+      free_for_member:
+        type: number
+      is_del:
+        type: integer
+      lan_code:
+        type: string
+      list_order:
+        type: integer
+      liveInfo:
+        $ref: '#/definitions/editor.LiveInfo'
+        type: object
+      module_name:
+        type: string
+      money:
+        type: number
+      money_type:
+        type: string
+      moneyDiscount:
+        type: number
+      published:
+        type: string
+      tag_keys:
+        items:
+          type: string
+        type: array
+      update_time:
+        type: string
+      user_id:
+        type: string
+    type: object
+  editorapi.AeneasParams:
+    properties:
+      content:
+        type: string
+      language:
+        description: language = "eng" https://www.readbeyond.it/aeneas/docs/language.html
+        type: string
+      plain:
+        description: var plain = "mplain" // mplain 每个单词    plain 每个句子 unparsed
+        type: string
+    type: object
+  editorapi.CatalogCopyParam:
+    properties:
+      same_lang:
+        type: boolean
+      to_uuid:
+        type: string
+      uuids:
+        items:
+          type: string
+        type: array
+    type: object
+  editorapi.ContentExportListParams:
+    properties:
+      code:
+        type: string
+      pageNo:
+        type: integer
+      pageSize:
+        type: integer
+    type: object
+  editorapi.ContentExportParams:
+    properties:
+      attr_tag:
+        type: string
+      code:
+        type: string
+      id:
+        description: 下载数据ID
+        type: string
+      level:
+        description: 级别
+        type: string
+      merge:
+        type: boolean
+      name:
+        type: string
+      parent_uuids:
+        items:
+          type: string
+        type: array
+      uuid:
+        description: UUID
+        type: string
+    type: object
+  editorapi.CourseGetDetailParam:
+    properties:
+      course_code:
+        type: string
+    type: object
+  editorapi.CoursePriDetail:
+    properties:
+      content:
+        properties:
+          lesson:
+            type: string
+          sentence:
+            type: string
+          word:
+            type: string
+        type: object
+      course_code:
+        type: string
+      desc:
+        type: string
+      features:
+        items:
+          properties:
+            desc:
+              type: string
+            img:
+              type: string
+            list_order:
+              type: integer
+            title:
+              type: string
+          type: object
+        type: array
+      flag:
+        type: string
+      has_dict:
+        type: boolean
+      sound_actors:
+        items:
+          $ref: '#/definitions/editorapi.soundActor'
+        type: array
+      title:
+        type: string
+    type: object
+  editorapi.FeildInfo:
+    properties:
+      data_from:
+        type: string
+      desc:
+        type: string
+      feild:
+        type: string
+      list_order:
+        type: integer
+      name:
+        type: string
+      sub_feilds:
+        items:
+          $ref: '#/definitions/editorapi.subFeildInfo'
+        type: array
+      type:
+        type: string
+    type: object
+  editorapi.GagParam:
+    properties:
+      courseUUID:
+        description: 直播ChatroomID
+        type: string
+      minute:
+        description: 禁多长时间
+        type: string
+      userIds:
+        description: 直播参与用户的ID
+        items:
+          type: string
+        type: array
+    type: object
+  editorapi.ListOrderParam:
+    properties:
+      code:
+        type: string
+      list_order:
+        type: integer
+    type: object
+  editorapi.ListsParams:
+    properties:
+      pageNo:
+        type: integer
+      pageSize:
+        type: integer
+    type: object
+  editorapi.OperateDate:
+    properties:
+      end:
+        type: string
+      start:
+        type: string
+    type: object
+  editorapi.OperateLogDetailsParams:
+    properties:
+      parent_uuid:
+        type: string
+      pattern:
+        type: integer
+      user_id:
+        type: string
+      uuid:
+        type: string
+    type: object
+  editorapi.OperateLogListParams:
+    properties:
+      operate_date:
+        $ref: '#/definitions/editorapi.OperateDate'
+        type: object
+      page_no:
+        type: integer
+      page_size:
+        type: integer
+      user_id:
+        type: string
+    type: object
+  editorapi.RollbackParams:
+    properties:
+      uuid:
+        type: string
+    type: object
+  editorapi.SearchWord:
+    properties:
+      listOrder:
+        type: integer
+      uuid:
+        type: string
+      word:
+        type: string
+    type: object
+  editorapi.UserCountParam:
+    properties:
+      course_uuid:
+        description: 直播ChatroomID
+        type: string
+    type: object
+  editorapi.authority:
+    properties:
+      authority:
+        description: 权限：r/rw
+        type: string
+      user_uuid:
+        description: 目录分配给编辑的UUID
+        type: string
+    type: object
+  editorapi.authoritySetParam:
+    properties:
+      authorities:
+        items:
+          $ref: '#/definitions/editorapi.authority'
+        type: array
+      type:
+        type: string
+      uuid:
+        type: string
+    type: object
+  editorapi.catalogAddParam:
+    properties:
+      catalogsInfo:
+        $ref: '#/definitions/editorapi.catalogsInfo'
+        type: object
+      num:
+        description: 增加的目录或文件的数量
+        type: integer
+    type: object
+  editorapi.catalogDelParam:
+    properties:
+      uuid:
+        type: string
+    type: object
+  editorapi.catalogEditInfo:
+    properties:
+      attr_tag:
+        type: string
+      cover:
+        items:
+          type: string
+        type: array
+      desc:
+        additionalProperties:
+          type: string
+        type: object
+      flag:
+        items:
+          type: string
+        type: array
+      goalTitle:
+        type: string
+      has_changed:
+        type: boolean
+      is_show:
+        type: boolean
+      list_order:
+        type: integer
+      name:
+        type: string
+      onlineState:
+        type: integer
+      tags:
+        items:
+          type: string
+        type: array
+      title:
+        additionalProperties:
+          type: string
+        type: object
+      update_time:
+        type: integer
+    type: object
+  editorapi.catalogEditParam:
+    properties:
+      catalog_info:
+        $ref: '#/definitions/editorapi.catalogEditInfo'
+        type: object
+      uuid:
+        type: string
+    type: object
+  editorapi.catalogMoveParam:
+    properties:
+      from_uuid:
+        type: string
+      to_uuid:
+        type: string
+      uuid:
+        type: string
+    type: object
+  editorapi.catalogRenameParam:
+    properties:
+      name:
+        type: string
+      uuid:
+        type: string
+    type: object
+  editorapi.catalogShowParam:
+    properties:
+      is_show:
+        type: boolean
+      uuid:
+        type: string
+    type: object
+  editorapi.catalogsInfo:
+    properties:
+      attr_tag:
+        type: string
+      content_model:
+        type: string
+      cover:
+        items:
+          type: string
+        type: array
+      desc:
+        additionalProperties:
+          type: string
+        type: object
+      flag:
+        items:
+          type: string
+        type: array
+      has_changed:
+        type: boolean
+      has_del:
+        type: boolean
+      is_show:
+        type: boolean
+      list_order:
+        type: integer
+      name:
+        type: string
+      onlineState:
+        type: integer
+      parent_uuid:
+        type: string
+      tags:
+        items:
+          type: string
+        type: array
+      title:
+        additionalProperties:
+          type: string
+        type: object
+      type:
+        type: string
+      update_time:
+        type: integer
+      uuid:
+        type: string
+    type: object
+  editorapi.catalogsListsParams:
+    properties:
+      parent_uuid:
+        type: string
+    type: object
+  editorapi.channelListOrder:
+    properties:
+      listOrder:
+        type: integer
+      uuid:
+        type: string
+    type: object
+  editorapi.channelListOrders:
+    items:
+      $ref: '#/definitions/editorapi.channelListOrder'
+    type: array
+  editorapi.classWeixinDelPara:
+    properties:
+      id:
+        type: string
+    type: object
+  editorapi.classWeixinEditPara:
+    properties:
+      courseCode:
+        type: string
+      id:
+        type: string
+      isShow:
+        type: boolean
+      weixinCode:
+        type: string
+      weixinNo:
+        type: string
+    type: object
+  editorapi.classWeixinParam:
+    properties:
+      courseCode:
+        type: string
+      createdTime:
+        type: integer
+      isShow:
+        type: boolean
+      weixinCode:
+        type: string
+      weixinNo:
+        type: string
+    type: object
+  editorapi.classWeixinParams:
+    properties:
+      courseCode:
+        type: string
+      pageNo:
+        type: integer
+      pageSize:
+        type: integer
+    type: object
+  editorapi.commentsParam:
+    properties:
+      uuid:
+        description: 直播课程UUID
+        type: string
+    type: object
+  editorapi.contenType:
+    properties:
+      desc:
+        type: string
+      has_del:
+        type: boolean
+      list_order:
+        type: integer
+      model_key:
+        type: string
+      model_keys:
+        items:
+          type: string
+        type: array
+      name:
+        type: string
+      type:
+        type: string
+    type: object
+  editorapi.contentAddParams:
+    properties:
+      copy_from_uuid:
+        type: string
+      copy_same_lang:
+        type: boolean
+      cover:
+        items:
+          type: string
+        type: array
+      desc:
+        additionalProperties:
+          type: string
+        type: object
+      flag:
+        items:
+          type: string
+        type: array
+      has_changed:
+        type: boolean
+      has_del:
+        type: boolean
+      is_show:
+        type: boolean
+      module:
+        type: string
+      name:
+        type: string
+      parent_uuid:
+        type: string
+      tags:
+        items:
+          type: string
+        type: array
+      title:
+        additionalProperties:
+          type: string
+        type: object
+      update_time:
+        type: integer
+      uuid:
+        type: string
+      version:
+        type: string
+    type: object
+  editorapi.contentDelParam:
+    properties:
+      content_model:
+        type: string
+      del_uuids:
+        items:
+          type: string
+        type: array
+      parent_uuid:
+        type: string
+    type: object
+  editorapi.contentDelParams:
+    properties:
+      uuid:
+        type: string
+    type: object
+  editorapi.contentEditParam:
+    properties:
+      content_model:
+        description: 内容模型名
+        type: string
+      contents:
+        description: 多个元素的文件内容
+        type: string
+      parent_uuid:
+        description: 文件目录的UUID
+        type: string
+    type: object
+  editorapi.contentEditParams:
+    properties:
+      content_info:
+        $ref: '#/definitions/editorapi.contentInfo'
+        type: object
+      uuid:
+        type: string
+    type: object
+  editorapi.contentGetParam:
+    properties:
+      content_model:
+        type: string
+      parent_uuid:
+        type: string
+    type: object
+  editorapi.contentInfo:
+    properties:
+      cover:
+        items:
+          type: string
+        type: array
+      desc:
+        additionalProperties:
+          type: string
+        type: object
+      flag:
+        items:
+          type: string
+        type: array
+      has_changed:
+        type: boolean
+      is_show:
+        type: boolean
+      name:
+        type: string
+      tags:
+        items:
+          type: string
+        type: array
+      title:
+        additionalProperties:
+          type: string
+        type: object
+      update_time:
+        type: integer
+      version:
+        type: string
+    type: object
+  editorapi.contentListParams:
+    properties:
+      pageNo:
+        description: 注释
+        type: integer
+      pageSize:
+        type: integer
+      parent_uuid:
+        type: string
+    type: object
+  editorapi.contentTypeDelParam:
+    properties:
+      type:
+        type: string
+    type: object
+  editorapi.contentTypeListOrder:
+    properties:
+      list_order:
+        type: integer
+      type:
+        type: string
+    type: object
+  editorapi.contentTypeListOrderInfos:
+    items:
+      $ref: '#/definitions/editorapi.contentTypeListOrder'
+    type: array
+  editorapi.contentUnlockParam:
+    properties:
+      course_code:
+        type: string
+      talkmate_id:
+        type: string
+    required:
+    - course_code
+    type: object
+  editorapi.coruseDelParam:
+    properties:
+      uuid:
+        type: string
+    type: object
+  editorapi.courseAddParam:
+    properties:
+      code:
+        type: string
+      course_type:
+        type: integer
+      cover:
+        items:
+          type: string
+        type: array
+      default_actor:
+        type: string
+      desc:
+        additionalProperties:
+          type: string
+        type: object
+      flag:
+        items:
+          type: string
+        type: array
+      has_del:
+        type: boolean
+      has_dict:
+        type: boolean
+      is_show:
+        type: boolean
+      lan_code:
+        type: string
+      name:
+        type: string
+      sound_actors:
+        items:
+          $ref: '#/definitions/editorapi.soundActor'
+        type: array
+      tags:
+        items:
+          type: string
+        type: array
+      title:
+        additionalProperties:
+          type: string
+        type: object
+      uuid:
+        type: string
+    type: object
+  editorapi.courseEditInfo:
+    properties:
+      course_type:
+        type: integer
+      cover:
+        items:
+          type: string
+        type: array
+      default_actor:
+        type: string
+      desc:
+        additionalProperties:
+          type: string
+        type: object
+      flag:
+        items:
+          type: string
+        type: array
+      has_dict:
+        type: boolean
+      is_show:
+        type: boolean
+      name:
+        type: string
+      sound_actors:
+        items:
+          $ref: '#/definitions/editorapi.soundActor'
+        type: array
+      tags:
+        items:
+          type: string
+        type: array
+      title:
+        additionalProperties:
+          type: string
+        type: object
+    type: object
+  editorapi.courseEditParam:
+    properties:
+      editInfo:
+        $ref: '#/definitions/editorapi.courseEditInfo'
+        type: object
+      uuid:
+        type: string
+    type: object
+  editorapi.courseListParams:
+    properties:
+      lan_code:
+        type: string
+      pageNo:
+        type: integer
+      pageSize:
+        type: integer
+    type: object
+  editorapi.csp:
+    properties:
+      content_model:
+        type: string
+      searchType:
+        description: 0模糊搜索，1精确搜索
+        type: integer
+      words:
+        type: string
+    type: object
+  editorapi.examinParam:
+    properties:
+      catalog_uuid:
+        description: 目录UUID
+        type: string
+      comment:
+        description: 审核评语
+        type: string
+      examin_state:
+        description: 审核状态，0正在编辑，1提交审核，2审核通过，3审核没通过
+        type: integer
+      user_uuid:
+        description: 分配的权限UUID
+        type: string
+    type: object
+  editorapi.examinSubmitParam:
+    properties:
+      catalog_uuid:
+        description: 目录UUID
+        type: string
+    type: object
+  editorapi.imageAddMoreParam:
+    properties:
+      image_urls:
+        items:
+          type: string
+        type: array
+      names:
+        items:
+          type: string
+        type: array
+      tagKeys:
+        items:
+          type: string
+        type: array
+    type: object
+  editorapi.imageAddParam:
+    properties:
+      image_url:
+        type: string
+      tagKeys:
+        items:
+          type: string
+        type: array
+    type: object
+  editorapi.imageDelParam:
+    properties:
+      image_id:
+        type: string
+    type: object
+  editorapi.imageEditParam:
+    properties:
+      desc:
+        type: string
+      image_id:
+        type: string
+      image_url:
+        type: string
+      tagKeys:
+        items:
+          type: string
+        type: array
+    type: object
+  editorapi.imageSearchParam:
+    properties:
+      page:
+        type: integer
+      pageSize:
+        type: integer
+      searchType:
+        description: 0模糊搜索，1精确搜索
+        type: integer
+      tagKey:
+        type: string
+      words:
+        type: string
+    type: object
+  editorapi.imageTagParam:
+    properties:
+      tagKey:
+        type: string
+    type: object
+  editorapi.jobDelParam:
+    properties:
+      job_uuid:
+        type: string
+    type: object
+  editorapi.langDelPara:
+    properties:
+      lan_code:
+        type: string
+    type: object
+  editorapi.langEdit:
+    properties:
+      desc:
+        additionalProperties:
+          type: string
+        type: object
+      flag:
+        items:
+          type: string
+        type: array
+      is_hot:
+        type: boolean
+      is_show:
+        type: boolean
+      list_order:
+        type: integer
+      title:
+        additionalProperties:
+          type: string
+        type: object
+      word_direction:
+        type: string
+    type: object
+  editorapi.langEditPara:
+    properties:
+      lan_code:
+        type: string
+      lang_info:
+        $ref: '#/definitions/editorapi.langEdit'
+        type: object
+    type: object
+  editorapi.langPara:
+    properties:
+      desc:
+        additionalProperties:
+          type: string
+        type: object
+      flag:
+        items:
+          type: string
+        type: array
+      has_del:
+        type: boolean
+      is_hot:
+        type: boolean
+      is_show:
+        type: boolean
+      lan_code:
+        type: string
+      list_order:
+        type: integer
+      title:
+        additionalProperties:
+          type: string
+        type: object
+      word_direction:
+        type: string
+    type: object
+  editorapi.listOrdersPara:
+    items:
+      $ref: '#/definitions/editorapi.SearchWord'
+    type: array
+  editorapi.liveAddParam:
+    properties:
+      courses:
+        items:
+          $ref: '#/definitions/editor.LiveCourse'
+        type: array
+      room:
+        $ref: '#/definitions/editor.LiveRoom'
+        type: object
+    type: object
+  editorapi.liveCourseEditPara:
+    properties:
+      date:
+        description: 上课时间
+        type: string
+      endTime:
+        description: 上课结束时间
+        type: integer
+      finishInfo:
+        description: 结束时展示的信息
+        type: string
+      finishTitle:
+        description: 结束时展示的信息
+        type: string
+      startTime:
+        description: 上课开始时间
+        type: integer
+      uuid:
+        description: 课程UUID
+        type: string
+      videoCover:
+        description: 课程封面地址
+        type: string
+      videoTime:
+        description: 直播视频时长
+        type: integer
+      videoUrl:
+        description: 课程视频地址
+        type: string
+      weixinNo:
+        description: 微信号
+        type: string
+    type: object
+  editorapi.liveCoursePara:
+    properties:
+      uuid:
+        description: 课程UUID
+        type: string
+    type: object
+  editorapi.liveDelPara:
+    properties:
+      code:
+        type: string
+    type: object
+  editorapi.liveEditParam:
+    properties:
+      courses:
+        items:
+          $ref: '#/definitions/editor.LiveCourse'
+        type: array
+      room:
+        $ref: '#/definitions/editor.LiveEditRoom'
+        type: object
+    type: object
+  editorapi.liveSubParam:
+    properties:
+      course_code:
+        type: string
+      talkmate_id:
+        type: string
+    type: object
+  editorapi.modelAddPara:
+    properties:
+      desc:
+        type: string
+      feilds:
+        items:
+          $ref: '#/definitions/editorapi.FeildInfo'
+        type: array
+      has_del:
+        type: boolean
+      model_key:
+        type: string
+      name:
+        type: string
+    type: object
+  editorapi.modelDelPara:
+    properties:
+      model_key:
+        type: string
+    type: object
+  editorapi.modelEdit:
+    properties:
+      desc:
+        type: string
+      feilds:
+        items:
+          $ref: '#/definitions/editorapi.FeildInfo'
+        type: array
+      name:
+        type: string
+    type: object
+  editorapi.modelEditPara:
+    properties:
+      model_info:
+        $ref: '#/definitions/editorapi.modelEdit'
+        type: object
+      model_key:
+        type: string
+    type: object
+  editorapi.modelListsParams:
+    properties:
+      pageNo:
+        type: integer
+      pageSize:
+        type: integer
+    type: object
+  editorapi.onlineCourseCodes:
+    items:
+      type: string
+    type: array
+  editorapi.onlineJonParam:
+    properties:
+      db_env:
+        description: 上线的环境：test ,online
+        type: string
+      jobName:
+        type: string
+      online_type:
+        type: string
+      online_uuid:
+        type: string
+    type: object
+  editorapi.radioChannelDelParam:
+    properties:
+      uuid:
+        type: string
+    type: object
+  editorapi.roomMsg:
+    properties:
+      coins:
+        description: 打赏的金币
+        type: integer
+      content:
+        description: 直播评论
+        type: string
+      role:
+        description: 角色
+        type: string
+      user_id:
+        description: 发送用户的ID
+        type: string
+      uuid:
+        description: 直播UUID
+        type: string
+    type: object
+  editorapi.searchWordDelParam:
+    properties:
+      uuid:
+        type: string
+    type: object
+  editorapi.soundActor:
+    properties:
+      city:
+        description: 城市
+        type: string
+      desc:
+        description: 描述
+        type: string
+      gender:
+        type: integer
+      name:
+        type: string
+      photo:
+        type: string
+      role:
+        type: string
+      sound:
+        type: string
+    type: object
+  editorapi.subFeildInfo:
+    properties:
+      data_from:
+        type: string
+      desc:
+        type: string
+      feild:
+        type: string
+      list_order:
+        type: integer
+      name:
+        type: string
+      sub_feilds:
+        items:
+          $ref: '#/definitions/editorapi.subFeildInfoSon'
+        type: array
+      type:
+        type: string
+    type: object
+  editorapi.subFeildInfoSon:
+    properties:
+      data_from:
+        type: string
+      desc:
+        type: string
+      feild:
+        type: string
+      list_order:
+        type: integer
+      name:
+        type: string
+      type:
+        type: string
+    type: object
+  editorapi.tagType:
+    properties:
+      name:
+        description: 类型名称
+        type: string
+      type:
+        description: 类型标示
+        type: string
+    type: object
+  editorapi.tagsDelPara:
+    properties:
+      key:
+        type: string
+    type: object
+  editorapi.tagsListsParams:
+    properties:
+      name:
+        type: string
+      pageNo:
+        type: integer
+      pageSize:
+        type: integer
+      type:
+        type: string
+    type: object
+  modelInterface.PageInfo:
+    properties:
+      page:
+        type: integer
+      pageSize:
+        type: integer
+    type: object
+  requests.ActorsCreateRequests:
+    properties:
+      city:
+        description: 城市
+        type: string
+      country:
+        description: 国籍
+        type: string
+      desc:
+        description: 描述
+        type: string
+      feature:
+        description: 声音特点
+        type: string
+      gender:
+        description: 性别 1,男；0，女；
+        type: integer
+      lang:
+        description: 语言
+        type: string
+      name:
+        description: 声优名称
+        type: string
+      photo:
+        description: 头像
+        type: string
+      role:
+        description: 分组
+        type: string
+      sound:
+        description: 声音地址
+        type: string
+      soundTime:
+        description: 时长
+        type: number
+      status:
+        description: 状态 1，上线；2，下线
+        type: integer
+    type: object
+  requests.ActorsDeleteRequests:
+    properties:
+      city:
+        description: 城市
+        type: string
+      country:
+        description: 国籍
+        type: string
+      desc:
+        description: 描述
+        type: string
+      feature:
+        description: 声音特点
+        type: string
+      gender:
+        description: 性别 1,男；0，女；
+        type: integer
+      lang:
+        description: 语言
+        type: string
+      name:
+        description: 声优名称
+        type: string
+      photo:
+        description: 头像
+        type: string
+      role:
+        description: 分组
+        type: string
+      sound:
+        description: 声音地址
+        type: string
+      soundTime:
+        description: 时长
+        type: number
+      status:
+        description: 状态 1，上线；2，下线
+        type: integer
+      uuid:
+        description: Uuid
+        type: string
+    type: object
+  requests.ActorsFindOneRequests:
+    properties:
+      city:
+        description: 城市
+        type: string
+      country:
+        description: 国籍
+        type: string
+      desc:
+        description: 描述
+        type: string
+      feature:
+        description: 声音特点
+        type: string
+      gender:
+        description: 性别 1,男；0，女；
+        type: integer
+      lang:
+        description: 语言
+        type: string
+      name:
+        description: 声优名称
+        type: string
+      photo:
+        description: 头像
+        type: string
+      role:
+        description: 分组
+        type: string
+      sound:
+        description: 声音地址
+        type: string
+      soundTime:
+        description: 时长
+        type: number
+      status:
+        description: 状态 1，上线；2，下线
+        type: integer
+      uuid:
+        description: Uuid
+        type: string
+    type: object
+  requests.ActorsFindRequests:
+    properties:
+      city:
+        description: 城市
+        type: string
+      country:
+        description: 国籍
+        type: string
+      desc:
+        description: 描述
+        type: string
+      feature:
+        description: 声音特点
+        type: string
+      gender:
+        description: 性别 1,男；0，女；
+        type: integer
+      lang:
+        description: 语言
+        type: string
+      name:
+        description: 声优名称
+        type: string
+      photo:
+        description: 头像
+        type: string
+      role:
+        description: 分组
+        type: string
+      sound:
+        description: 声音地址
+        type: string
+      soundTime:
+        description: 时长
+        type: number
+      status:
+        description: 状态 1，上线；2，下线
+        type: integer
+      uuid:
+        description: Uuid
+        type: string
+    type: object
+  requests.ActorsListRequests:
+    properties:
+      city:
+        description: 城市
+        type: string
+      country:
+        description: 国籍
+        type: string
+      desc:
+        description: 描述
+        type: string
+      feature:
+        description: 声音特点
+        type: string
+      gender:
+        description: 性别 1,男；0，女；
+        type: integer
+      lang:
+        description: 语言
+        type: string
+      name:
+        description: 声优名称
+        type: string
+      page_index:
+        description: 分页第几页
+        type: integer
+      page_size:
+        description: 分页数据条数
+        type: integer
+      photo:
+        description: 头像
+        type: string
+      role:
+        description: 分组
+        type: string
+      sort_type:
+        description: 排序类型 1、倒叙；-1、顺序
+        type: integer
+      sound:
+        description: 声音地址
+        type: string
+      soundTime:
+        description: 时长
+        type: number
+      status:
+        description: 状态 1，上线；2，下线
+        type: integer
+      text_field:
+        description: 排序字段
+        type: string
+      uuid:
+        description: Uuid
+        type: string
+    type: object
+  requests.ActorsUpdateRequests:
+    properties:
+      city:
+        description: 城市
+        type: string
+      country:
+        description: 国籍
+        type: string
+      desc:
+        description: 描述
+        type: string
+      feature:
+        description: 声音特点
+        type: string
+      gender:
+        description: 性别 1,男；0，女；
+        type: integer
+      lang:
+        description: 语言
+        type: string
+      name:
+        description: 声优名称
+        type: string
+      photo:
+        description: 头像
+        type: string
+      role:
+        description: 分组
+        type: string
+      sound:
+        description: 声音地址
+        type: string
+      soundTime:
+        description: 时长
+        type: number
+      status:
+        description: 状态 1，上线；2，下线
+        type: integer
+      uuid:
+        description: Uuid
+        type: string
+    type: object
+  requests.ContentReportsCreateRequests:
+    properties:
+      agent:
+        description: agent
+        type: string
+      code:
+        description: 课程编码
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        description: 版本
+        type: integer
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      img:
+        description: 图片地址
+        type: string
+      langCode:
+        description: 归属语言
+        type: string
+      parentUuids:
+        description: 所有父节点
+        items:
+          type: string
+        type: array
+      status:
+        description: 状态 1，已处理；0，未处理；默认0
+        type: integer
+      tags:
+        description: tags
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  requests.ContentReportsDeleteRequests:
+    properties:
+      agent:
+        description: agent
+        type: string
+      code:
+        description: 课程编码
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        description: 版本
+        type: integer
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      img:
+        description: 图片地址
+        type: string
+      langCode:
+        description: 归属语言
+        type: string
+      parentUuids:
+        description: 所有父节点
+        items:
+          type: string
+        type: array
+      status:
+        description: 状态 1，已处理；0，未处理；默认0
+        type: integer
+      tags:
+        description: tags
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  requests.ContentReportsFindOneRequests:
+    properties:
+      agent:
+        description: agent
+        type: string
+      code:
+        description: 课程编码
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        description: 版本
+        type: integer
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      img:
+        description: 图片地址
+        type: string
+      langCode:
+        description: 归属语言
+        type: string
+      parentUuids:
+        description: 所有父节点
+        items:
+          type: string
+        type: array
+      status:
+        description: 状态 1，已处理；0，未处理；默认0
+        type: integer
+      tags:
+        description: tags
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  requests.ContentReportsFindRequests:
+    properties:
+      agent:
+        description: agent
+        type: string
+      code:
+        description: 课程编码
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        description: 版本
+        type: integer
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      img:
+        description: 图片地址
+        type: string
+      langCode:
+        description: 归属语言
+        type: string
+      parentUuids:
+        description: 所有父节点
+        items:
+          type: string
+        type: array
+      status:
+        description: 状态 1，已处理；0，未处理；默认0
+        type: integer
+      tags:
+        description: tags
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  requests.ContentReportsListRequests:
+    properties:
+      agent:
+        description: agent
+        type: string
+      code:
+        description: 课程编码
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        description: 版本
+        type: integer
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      img:
+        description: 图片地址
+        type: string
+      langCode:
+        description: 归属语言
+        type: string
+      page_index:
+        description: 分页第几页
+        type: integer
+      page_size:
+        description: 分页数据条数
+        type: integer
+      parentUuids:
+        description: 所有父节点
+        items:
+          type: string
+        type: array
+      sort_type:
+        description: 排序类型 1、倒叙；-1、顺序
+        type: integer
+      status:
+        description: 状态 1，已处理；0，未处理；默认0
+        type: integer
+      tags:
+        description: tags
+        type: string
+      text_field:
+        description: 排序字段
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  requests.ContentReportsUpdateRequests:
+    properties:
+      agent:
+        description: agent
+        type: string
+      code:
+        description: 课程编码
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        description: 版本
+        type: integer
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      img:
+        description: 图片地址
+        type: string
+      langCode:
+        description: 归属语言
+        type: string
+      parentUuids:
+        description: 所有父节点
+        items:
+          type: string
+        type: array
+      status:
+        description: 状态 1，已处理；0，未处理；默认0
+        type: integer
+      tags:
+        description: tags
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  requests.ContentTr:
+    properties:
+      content:
+        type: string
+      cx:
+        type: string
+    type: object
+  requests.CourseFilesCreateTranscodeRequests:
+    properties:
+      file_url:
+        type: string
+      live_uuid:
+        type: string
+      size:
+        type: integer
+      title:
+        type: string
+      type:
+        type: string
+    type: object
+  requests.CourseFilesDeleteRequests:
+    properties:
+      live_uuid:
+        type: string
+      uuid:
+        type: string
+    required:
+    - live_uuid
+    - uuid
+    type: object
+  requests.CourseFilesListRequests:
+    properties:
+      live_uuid:
+        type: string
+    type: object
+  requests.CourseFilesTranscodeRequests:
+    properties:
+      task_id:
+        type: string
+    type: object
+  requests.CourseInfos:
+    properties:
+      chapterCode:
+        type: string
+      courseCode:
+        type: string
+      image:
+        type: string
+      sound:
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  requests.DictDelRequests:
+    properties:
+      ctype:
+        type: string
+      from:
+        description: 来自 en
+        type: string
+      to:
+        description: 去向 zh
+        type: string
+      uuids:
+        description: uuid
+        items:
+          type: string
+        type: array
+    required:
+    - from
+    - to
+    type: object
+  requests.DictDetailRequests:
+    properties:
+      from:
+        description: 来自 en
+        type: string
+      to:
+        description: "去向\t zh"
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    required:
+    - from
+    - to
+    - uuid
+    type: object
+  requests.DictListRequests:
+    properties:
+      content:
+        description: 搜索内容
+        type: string
+      from:
+        description: 来自 en
+        type: string
+      is_del:
+        description: 是否删除
+        type: boolean
+      online:
+        description: 是否删除
+        type: string
+      page_index:
+        description: 分页第几页
+        type: integer
+      page_size:
+        description: 分页数据条数
+        type: integer
+      searchType:
+        description: 搜索类型：0（精确），1（模糊）
+        type: integer
+      sort_type:
+        description: 排序类型 1、倒叙；-1、顺序
+        type: integer
+      text_field:
+        description: 排序字段
+        type: string
+      to:
+        description: "去向\t zh"
+        type: string
+    required:
+    - from
+    - to
+    type: object
+  requests.DictOnlineRequests:
+    properties:
+      ctype:
+        description: word or sentence
+        type: string
+      from:
+        description: 来自 en
+        type: string
+      to:
+        description: "去向\t zh"
+        type: string
+      uuids:
+        items:
+          type: string
+        type: array
+    required:
+    - ctype
+    - from
+    - to
+    - uuids
+    type: object
+  requests.DictTranslate:
+    properties:
+      contentTr:
+        description: 词义
+        items:
+          $ref: '#/definitions/requests.ContentTr'
+        type: array
+      expansion:
+        description: 拓展
+        type: string
+      from:
+        description: 类型
+        type: string
+      homonyms:
+        description: 同词根
+        items:
+          $ref: '#/definitions/requests.Homonyms'
+        type: array
+      parent:
+        description: uuid
+        type: string
+      synonym:
+        description: 近义词
+        items:
+          $ref: '#/definitions/requests.Synonym'
+        type: array
+      tags:
+        description: 多语言标签
+        items:
+          $ref: '#/definitions/requests.Tag'
+        type: array
+      to:
+        description: 要翻译的目标语言
+        type: string
+    type: object
+  requests.DictUpdateRequests:
+    properties:
+      content:
+        description: 单词
+        type: string
+      dictTranslate:
+        $ref: '#/definitions/requests.DictTranslate'
+        description: 翻译
+        type: object
+      from:
+        description: 来自 en
+        type: string
+      images:
+        description: 图片
+        items:
+          $ref: '#/definitions/requests.Image'
+        type: array
+      isDel:
+        description: 是否删除
+        type: boolean
+      phrase:
+        description: 短语
+        items:
+          $ref: '#/definitions/requests.PhraseResponse'
+        type: array
+      soundInfos:
+        description: 音标
+        items:
+          $ref: '#/definitions/requests.SoundInfos'
+        type: array
+      to:
+        description: 去向 zh
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    required:
+    - from
+    - to
+    type: object
+  requests.Homonyms:
+    properties:
+      attrs:
+        items:
+          $ref: '#/definitions/requests.WordAttr'
+        type: array
+      cx:
+        type: string
+    type: object
+  requests.Image:
+    properties:
+      name:
+        type: string
+      url:
+        type: string
+    type: object
+  requests.PhraseResponse:
+    properties:
+      content:
+        description: 短语单词
+        type: string
+      contentTr:
+        description: 短语翻译
+        type: string
+      createdOn:
+        description: 创建时间
+        type: string
+      dict_uuid:
+        description: 多个字典UUID
+        items:
+          type: string
+        type: array
+      isDel:
+        description: 是否删除
+        type: boolean
+      updatedOn:
+        description: 更新时间
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  requests.QRcodeAddRequests:
+    properties:
+      info:
+        description: json内容
+        type: string
+      size:
+        description: 二维码图片大小
+        type: integer
+      title:
+        description: 标题
+        type: string
+    type: object
+  requests.QRcodeDeleteRequests:
+    properties:
+      uuid:
+        description: UUID
+        type: string
+    required:
+    - uuid
+    type: object
+  requests.QRcodeDetailsRequests:
+    properties:
+      addressContent:
+        description: AddressContent
+        type: string
+      userAgent:
+        description: UserAgent
+        type: string
+      uuid:
+        description: UUID
+        type: string
+    required:
+    - uuid
+    type: object
+  requests.QRcodeImageRequests:
+    properties:
+      size:
+        description: 二维码图片大小
+        type: integer
+      url:
+        description: Url内容
+        type: string
+    required:
+    - url
+    type: object
+  requests.QRcodeListRequests:
+    properties:
+      page_index:
+        description: 分页第几页
+        type: integer
+      page_size:
+        description: 分页数据条数
+        type: integer
+      sort_type:
+        description: 排序类型 1、倒叙；-1、顺序
+        type: integer
+      text_field:
+        description: 排序字段
+        type: string
+    type: object
+  requests.QRcodeUpdateRequests:
+    properties:
+      info:
+        description: json内容
+        type: string
+      size:
+        description: 二维码图片大小
+        type: integer
+      title:
+        description: 标题
+        type: string
+      uuid:
+        description: UUID
+        type: string
+    required:
+    - uuid
+    type: object
+  requests.ReportsCreateRequests:
+    properties:
+      conId:
+        description: 内容ID
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        type: string
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      repType:
+        description: '请求类型: word，sentence'
+        type: string
+      state:
+        description: 状态 默认0；0代表未处理，1代表已处理
+        type: string
+      tags:
+        description: 标签
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+    type: object
+  requests.ReportsDeleteRequests:
+    properties:
+      conId:
+        description: 内容ID
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        type: string
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      repType:
+        description: '请求类型: word，sentence'
+        type: string
+      state:
+        description: 状态 默认0；0代表未处理，1代表已处理
+        type: integer
+      tags:
+        description: 标签
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+    type: object
+  requests.ReportsFindOneRequests:
+    properties:
+      conId:
+        description: 内容ID
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        type: string
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      repType:
+        description: '请求类型: word，sentence'
+        type: string
+      state:
+        description: 状态 默认0；0代表未处理，1代表已处理
+        type: string
+      tags:
+        description: 标签
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+    type: object
+  requests.ReportsFindRequests:
+    properties:
+      conId:
+        description: 内容ID
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        type: string
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      repType:
+        description: '请求类型: word，sentence'
+        type: string
+      state:
+        description: 状态 默认0；0代表未处理，1代表已处理
+        type: string
+      tags:
+        description: 标签
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+    type: object
+  requests.ReportsListRequests:
+    properties:
+      conId:
+        description: 内容ID
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        type: string
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      page_index:
+        description: 分页第几页
+        type: integer
+      page_size:
+        description: 分页数据条数
+        type: integer
+      repType:
+        description: '请求类型: word，sentence'
+        type: string
+      sort_type:
+        description: 排序类型 1、倒叙；-1、顺序
+        type: integer
+      state:
+        description: 状态 默认0；0代表未处理，1代表已处理
+        type: string
+      tags:
+        description: 标签
+        type: string
+      text_field:
+        description: 排序字段
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+    type: object
+  requests.ReportsUpdateRequests:
+    properties:
+      conId:
+        description: 内容ID
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        type: string
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      repType:
+        description: '请求类型: word，sentence'
+        type: string
+      state:
+        description: 状态 默认0；0代表未处理，1代表已处理
+        type: integer
+      tags:
+        description: 标签
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+    type: object
+  requests.SentenceSearchRequests:
+    properties:
+      from:
+        description: from
+        type: string
+      page_index:
+        description: 分页第几页
+        type: integer
+      page_size:
+        description: 分页数据条数
+        type: integer
+      searchType:
+        description: 0 精确；1 模糊
+        type: integer
+      sentence:
+        description: 句子
+        type: string
+      sort_type:
+        description: 排序类型 1、倒叙；-1、顺序
+        type: integer
+      text_field:
+        description: 排序字段
+        type: string
+      to:
+        description: to
+        type: string
+    required:
+    - from
+    - to
+    type: object
+  requests.SentenceSoundInfos:
+    properties:
+      gender:
+        description: 'male: 男音 female：女音'
+        type: string
+      sound:
+        description: 声音
+        type: string
+    type: object
+  requests.SentenceTranslate:
+    properties:
+      contentTr:
+        type: string
+      from:
+        description: 类型
+        type: string
+      parent:
+        description: uuid
+        type: string
+      tags:
+        description: 多语言标签
+        items:
+          $ref: '#/definitions/requests.Tag'
+        type: array
+      to:
+        description: 要翻译的目标语言
+        type: string
+    type: object
+  requests.SentenceUpdate:
+    properties:
+      courseInfos:
+        description: 课程
+        items:
+          $ref: '#/definitions/requests.CourseInfos'
+        type: array
+      from:
+        description: from
+        type: string
+      image:
+        description: 图片
+        items:
+          type: string
+        type: array
+      isDel:
+        description: 是否删除
+        type: boolean
+      mold:
+        description: 类型 1：口语；2：书面语；
+        type: integer
+      sentence:
+        description: 句子
+        type: string
+      sentenceTr:
+        $ref: '#/definitions/requests.SentenceTranslate'
+        description: 翻译内容
+        type: object
+      soundInfos:
+        description: 声音
+        items:
+          $ref: '#/definitions/requests.SentenceSoundInfos'
+        type: array
+      source:
+        description: 来源
+        type: string
+      to:
+        description: to
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    required:
+    - from
+    - sentence
+    - to
+    - uuid
+    type: object
+  requests.SoundInfos:
+    properties:
+      ct:
+        description: 类型 en：英；us：美;
+        type: string
+      gender:
+        description: 'male: 男音 female：女音'
+        type: string
+      ps:
+        description: 音标
+        type: string
+      sound:
+        description: 声音
+        type: string
+    type: object
+  requests.StatisticUnlockChapter:
+    properties:
+      code:
+        description: Code
+        type: string
+      courseCode:
+        description: courseCode
+        type: string
+      endDate:
+        description: 结束时间
+        type: string
+      startDate:
+        description: 开始时间
+        type: string
+    required:
+    - code
+    - courseCode
+    - endDate
+    - startDate
+    type: object
+  requests.StatisticUnlockPart:
+    properties:
+      chapter:
+        description: courseCode
+        type: string
+      code:
+        description: Code
+        type: string
+      courseCode:
+        description: courseCode
+        type: string
+      endDate:
+        description: 结束时间
+        type: string
+      id:
+        description: courseCode
+        type: string
+      startDate:
+        description: 开始时间
+        type: string
+    required:
+    - code
+    - courseCode
+    - endDate
+    - startDate
+    type: object
+  requests.Synonym:
+    properties:
+      content:
+        type: string
+      contentTr:
+        type: string
+      cx:
+        type: string
+    type: object
+  requests.Tag:
+    properties:
+      key:
+        type: string
+      name:
+        type: string
+    type: object
+  requests.TeacherAuditRequests:
+    properties:
+      content:
+        description: 审核内容
+        type: string
+      status:
+        description: 认证状态 1、待认证，2、认证未通过，3、认证通过
+        type: integer
+      user_id:
+        description: 用户ID
+        type: string
+    required:
+    - status
+    - user_id
+    type: object
+  requests.TeacherEditRequests:
+    properties:
+      user_id:
+        description: 用户ID(必填)
+        type: string
+    required:
+    - user_id
+    type: object
+  requests.TeacherListRequests:
+    properties:
+      lan_code:
+        description: 课程code
+        type: string
+      page_index:
+        description: 分页第几页
+        type: integer
+      page_size:
+        description: 分页数据条数
+        type: integer
+      real_name:
+        description: 教师真实姓名
+        type: string
+      sort_type:
+        description: 排序类型 1、倒叙；-1、顺序
+        type: integer
+      status:
+        description: 认证状态 1、待认证，2、认证未通过，3、认证通过，4、已删除、已冻结
+        type: integer
+      text_field:
+        description: 排序字段
+        type: string
+    type: object
+  requests.WordAttr:
+    properties:
+      content:
+        type: string
+      contentTr:
+        type: string
+      cx:
+        type: string
+    type: object
+  responses.ActorsResponses:
+    properties:
+      city:
+        description: 城市
+        type: string
+      country:
+        description: 国籍
+        type: string
+      desc:
+        description: 描述
+        type: string
+      feature:
+        description: 声音特点
+        type: string
+      gender:
+        description: 性别 1,男；0，女；
+        type: integer
+      lang:
+        description: 语言
+        type: string
+      name:
+        description: 声优名称
+        type: string
+      photo:
+        description: 头像
+        type: string
+      role:
+        description: 分组
+        type: string
+      sound:
+        description: 声音地址
+        type: string
+      soundTime:
+        description: 时长
+        type: number
+      status:
+        description: 状态 1，上线；2，下线
+        type: integer
+      uuid:
+        description: Uuid
+        type: string
+    type: object
+  responses.ContentReportsResponses:
+    properties:
+      agent:
+        description: agent
+        type: string
+      code:
+        description: 课程编码
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      dataVersion:
+        description: 版本
+        type: integer
+      desc:
+        description: 描述
+        type: string
+      id:
+        description: ID
+        type: string
+      img:
+        description: 图片地址
+        type: string
+      langCode:
+        description: 归属语言
+        type: string
+      parentUuids:
+        description: 所有父节点
+        items:
+          type: string
+        type: array
+      status:
+        description: 状态 1，已处理；0，未处理；默认0
+        type: integer
+      tags:
+        description: tags
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  responses.ContentTr:
+    properties:
+      content:
+        description: 词义
+        type: string
+      cx:
+        description: 词性
+        type: string
+    type: object
+  responses.CourseFilesEventData:
+    properties:
+      compress_file_url:
+        type: string
+      pages:
+        type: integer
+      progress:
+        type: integer
+      resolution:
+        type: string
+      result_url:
+        type: string
+      status:
+        type: string
+      task_id:
+        type: string
+      title:
+        type: string
+    type: object
+  responses.CourseFilesListResponse:
+    properties:
+      created_on:
+        type: string
+      event_data:
+        $ref: '#/definitions/responses.CourseFilesEventData'
+        type: object
+      file_url:
+        type: string
+      live_uuid:
+        type: string
+      size:
+        type: integer
+      state:
+        description: 1,文档转换中；2，文档转换成功；3，文档转换成功；4，文档已删除
+        type: integer
+      task_id:
+        type: string
+      title:
+        type: string
+      type:
+        type: string
+      uuid:
+        type: string
+    type: object
+  responses.DictResponse:
+    properties:
+      content:
+        description: 单词
+        type: string
+      createdOn:
+        description: 创建时间
+        type: string
+      dictTranslate:
+        $ref: '#/definitions/responses.DictTranslate'
+        description: 翻译
+        type: object
+      done:
+        description: 是否上线
+        type: boolean
+      images:
+        description: 图片
+        items:
+          $ref: '#/definitions/responses.Image'
+        type: array
+      isDel:
+        description: 是否删除
+        type: boolean
+      phrase:
+        description: 短语
+        items:
+          $ref: '#/definitions/responses.PhraseResponse'
+        type: array
+      soundInfos:
+        description: 音标
+        items:
+          $ref: '#/definitions/responses.SoundInfos'
+        type: array
+      updatedOn:
+        description: 更新时间
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  responses.DictTranslate:
+    properties:
+      contentTr:
+        description: 词义
+        items:
+          $ref: '#/definitions/responses.ContentTr'
+        type: array
+      expansion:
+        description: 拓展
+        type: string
+      homonyms:
+        description: 同词根
+        items:
+          $ref: '#/definitions/responses.Homonyms'
+        type: array
+      parent:
+        description: uuid
+        type: string
+      synonym:
+        description: 近义词
+        items:
+          $ref: '#/definitions/responses.Synonym'
+        type: array
+      tags:
+        description: 多语言标签
+        items:
+          $ref: '#/definitions/responses.Tag'
+        type: array
+    type: object
+  responses.Homonyms:
+    properties:
+      attrs:
+        description: 词义
+        items:
+          $ref: '#/definitions/responses.WordAttr'
+        type: array
+      cx:
+        description: 词性
+        type: string
+    type: object
+  responses.Image:
+    properties:
+      name:
+        type: string
+      url:
+        type: string
+    type: object
+  responses.PhraseResponse:
+    properties:
+      content:
+        description: 短语单词
+        type: string
+      contentTr:
+        description: 短语翻译
+        type: string
+      createdOn:
+        description: 创建时间
+        type: string
+      dict_uuid:
+        description: 多个字典UUID
+        items:
+          type: string
+        type: array
+      isDel:
+        description: 是否删除
+        type: boolean
+      updatedOn:
+        description: 更新时间
+        type: string
+      uuid:
+        description: uuid
+        type: string
+    type: object
+  responses.ReportsResponses:
+    properties:
+      conId:
+        description: 内容ID
+        type: string
+      content:
+        description: 内容
+        type: string
+      createdTime:
+        description: 创建时间
+        type: string
+      dataArea:
+        type: string
+      desc:
+        description: 描述
+        type: string
+      fromLang:
+        description: from
+        type: string
+      id:
+        description: ID
+        type: string
+      repType:
+        description: '请求类型: word，sentence'
+        type: string
+      state:
+        description: 状态 默认0；0代表未处理，1代表已处理
+        type: integer
+      tags:
+        description: 标签
+        type: string
+      toLang:
+        description: to
+        type: string
+      userId:
+        description: 用户ID
+        type: string
+    type: object
+  responses.SoundInfos:
+    properties:
+      ct:
+        description: 类型 en：英； ：美;
+        type: string
+      gender:
+        description: 'male: 男音 female：女音'
+        type: string
+      ps:
+        description: 音标
+        type: string
+      sound:
+        description: 声音
+        type: string
+    type: object
+  responses.Synonym:
+    properties:
+      content:
+        description: 单词
+        type: string
+      contentTr:
+        description: 词义
+        type: string
+      cx:
+        description: 词性
+        type: string
+    type: object
+  responses.Tag:
+    properties:
+      key:
+        type: string
+      name:
+        type: string
+    type: object
+  responses.TeacherResponse:
+    properties:
+      address:
+        description: 现居住地址
+        type: string
+      approve_date:
+        description: 认证日期
+        type: string
+      birth_date:
+        description: 出生年月日
+        type: string
+      certificate_back:
+        description: 证件反面
+        type: string
+      certificate_front:
+        description: 证件正面
+        type: string
+      certificate_type:
+        description: 证件类型
+        type: string
+      course_number:
+        description: 课程数量
+        type: integer
+      created_on:
+        description: 创建时间
+        type: string
+      gender:
+        description: 性别
+        type: string
+      identity_card:
+        description: 身份证、护照
+        type: string
+      introduction:
+        description: 简介
+        type: string
+      lan_code:
+        description: 语种
+        items:
+          type: string
+        type: array
+      live_nickname:
+        description: 直播昵称
+        type: string
+      nationality:
+        description: 国籍
+        type: string
+      nickname:
+        description: 昵称
+        type: string
+      phonenumber:
+        description: 老师手机号码
+        type: string
+      photo:
+        description: 头像
+        type: string
+      real_name:
+        description: 真实姓名
+        type: string
+      status:
+        description: 认证状态 1、待认证，2、认证未通过，3、认证通过，4、已删除、已冻结
+        type: integer
+      talkmate_id:
+        description: talkmate_id
+        type: string
+      user_id:
+        description: 用户ID
+        type: string
+    type: object
+  responses.WordAttr:
+    properties:
+      content:
+        description: 单词
+        type: string
+      contentTr:
+        description: 词义
+        type: string
+    type: object
+  sysModel.SysApi:
+    properties:
+      description:
+        type: string
+      group:
+        type: string
+      path:
+        type: string
+    type: object
+  sysModel.SysAuthority:
+    properties:
+      authorityId:
+        type: string
+      authorityName:
+        type: string
+      children:
+        items:
+          $ref: '#/definitions/sysModel.SysAuthority'
+        type: array
+      parentId:
+        type: string
+    type: object
+  sysModel.SysBaseMenu:
+    properties:
+      children:
+        items:
+          $ref: '#/definitions/sysModel.SysBaseMenu'
+        type: array
+      component:
+        type: string
+      hidden:
+        type: boolean
+      icon:
+        type: string
+      name:
+        type: string
+      nickName:
+        type: string
+      parentId:
+        type: string
+      path:
+        type: string
+      sort:
+        type: string
+      title:
+        type: string
+    type: object
+  sysModel.SysUser:
+    properties:
+      authority:
+        $ref: '#/definitions/sysModel.SysAuthority'
+        type: object
+      authorityId:
+        type: string
+      headerImg:
+        type: string
+      nickName:
+        type: string
+      userName:
+        type: string
+      uuid:
+        type: string
+    type: object
+  sysModel.SysWorkflow:
+    properties:
+      workflowDescription:
+        description: 工作流描述
+        type: string
+      workflowName:
+        description: 工作流英文id
+        type: string
+      workflowNickName:
+        description: 工作流名称
+        type: string
+      workflowStep:
+        description: 工作流步骤
+        items:
+          $ref: '#/definitions/sysModel.SysWorkflowStepInfo'
+        type: array
+    type: object
+  sysModel.SysWorkflowStepInfo:
+    properties:
+      isEnd:
+        description: 是否是完结流节点
+        type: boolean
+      isStrat:
+        description: 是否是开始流节点
+        type: boolean
+      stepAuthorityID:
+        description: 操作者级别id
+        type: string
+      stepName:
+        description: 工作流名称
+        type: string
+      stepNo:
+        description: 步骤id （第几步）
+        type: number
+      workflowID:
+        description: 所属工作流ID
+        type: integer
+    type: object
+info:
+  contact: {}
+  description: 全球说编辑器后台API服务文档
+  license: {}
+  title: 全球说编辑器后台API服务文档
+  version: 0.0.1
+paths:
+  /api/createApi:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 创建api
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.CreateApiParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 创建基础api
+      tags:
+      - SysApi
+  /api/deleteApi:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 删除api
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/sysModel.SysApi'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除指定api
+      tags:
+      - SysApi
+  /api/getAllApis:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取所有的Api 不分页
+      tags:
+      - SysApi
+  /api/getApiById:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 分页获取用户列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/modelInterface.PageInfo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 根据id获取api
+      tags:
+      - SysApi
+  /api/getApiList:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 分页获取API列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/modelInterface.PageInfo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取API列表
+      tags:
+      - SysApi
+  /api/updataApi:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 创建api
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.CreateApiParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 创建基础api
+      tags:
+      - SysApi
+  /authority/createAuthority:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 创建角色
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.CreateAuthorityParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 创建角色
+      tags:
+      - authority
+  /authority/deleteAuthority:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 删除角色
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.DeleteAuthorityPatams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除角色
+      tags:
+      - authority
+  /authority/getAuthorityList:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 分页获取用户列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/modelInterface.PageInfo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取角色列表
+      tags:
+      - authority
+  /base/login:
+    post:
+      parameters:
+      - description: 用户登录接口
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.RegistAndLoginStuct'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"登陆成功"}'
+          schema:
+            type: string
+      summary: 用户登录
+      tags:
+      - Base
+  /base/regist:
+    post:
+      parameters:
+      - description: 用户注册接口
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/sysModel.SysUser'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"注册成功"}'
+          schema:
+            type: string
+      summary: 用户注册账号
+      tags:
+      - Base
+  /casbin/casbinPUpdata:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 更改角色api权限
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.CreateAuthorityParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更改角色api权限
+      tags:
+      - casbin
+  /casbin/getPolicyPathByAuthorityId:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 获取权限列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.CreateAuthorityParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取权限列表
+      tags:
+      - casbin
+  /dis/channel/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 频道数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editor.DiscoverChannel'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 增加频道
+      tags:
+      - DisChannelAPI（发现频道接口）
+  /dis/channel/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 频道数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.radioChannelDelParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除频道
+      tags:
+      - DisChannelAPI（发现频道接口）
+  /dis/channel/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 频道数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editor.DiscoverChannel'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑频道
+      tags:
+      - DisChannelAPI（发现频道接口）
+  /dis/channel/list:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取频道列表
+      tags:
+      - DisChannelAPI（发现频道接口）
+  /dis/channel/listorder:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 频道数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.channelListOrders'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 频道排序
+      tags:
+      - DisChannelAPI（发现频道接口）
+  /editor/actors/create:
+    post:
+      consumes:
+      - application/json
+      description: 添加Actors
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ActorsCreateRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加Actors
+      tags:
+      - Actors接口
+  /editor/actors/delete:
+    post:
+      consumes:
+      - application/json
+      description: 删除Actors数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ActorsDeleteRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除Actors数据
+      tags:
+      - Actors接口
+  /editor/actors/find:
+    post:
+      consumes:
+      - application/json
+      description: 查询Actors数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ActorsFindRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询Actors数据
+      tags:
+      - Actors接口
+  /editor/actors/findone:
+    post:
+      consumes:
+      - application/json
+      description: 查询一条Actors数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ActorsFindOneRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.ActorsResponses'
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询一条Actors数据
+      tags:
+      - Actors接口
+  /editor/actors/list:
+    post:
+      consumes:
+      - application/json
+      description: 查询Actors列表分页数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ActorsListRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.ActorsResponses'
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询Actors列表分页数据
+      tags:
+      - Actors接口
+  /editor/actors/update:
+    post:
+      consumes:
+      - application/json
+      description: 更新Actors数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ActorsUpdateRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新Actors数据
+      tags:
+      - Actors接口
+  /editor/authority/set:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 权限设置:authority的值为r(读)\rw(读写);type值：catalog/content_version
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.authoritySetParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"设置成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 设置课程编辑权限
+      tags:
+      - EditorAuthorityAPI(课程编辑权限接口)
+  /editor/card/aeneas_job:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 目录列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.AeneasParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"目录列表"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 音频数据打点
+      tags:
+      - 音频数据打点
+  /editor/catalog/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 添加目录
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.catalogAddParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加目录
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/catalog/copy:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 复制目录
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.CatalogCopyParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 复制目录
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/catalog/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 删除目录
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.catalogDelParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除目录
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/catalog/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 修改目录
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.catalogEditParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 修改目录
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/catalog/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 目录列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.catalogsListsParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"目录列表"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 目录列表
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/catalog/move:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 移动目录：uuid当前目录，fromUuid是从哪个目录移出，toUuid是移到哪个目录
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.catalogMoveParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 移动目录
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/catalog/rename:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 重命名
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.catalogRenameParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 目录重命名
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/catalog/show:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 是否显示参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.catalogShowParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 目录显示或隐藏操作
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/class_weixin/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程微信数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.classWeixinParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"添加成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加课程微信
+      tags:
+      - LiveAPI（课程微信接口）
+  /editor/class_weixin/del:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程微信数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.classWeixinDelPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除课程微信
+      tags:
+      - LiveAPI（课程微信接口）
+  /editor/class_weixin/edit:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程微信数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.classWeixinEditPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑课程微信
+      tags:
+      - LiveAPI（课程微信接口）
+  /editor/class_weixin/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 分页参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.classWeixinParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 课程微信列表
+      tags:
+      - LiveAPI（课程微信接口）
+  /editor/content:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 获取文件内容
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentGetParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取文件内容
+      tags:
+      - EditorContentAPI（内容接口）
+  /editor/content/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 删除文件内容
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentDelParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除文件内容
+      tags:
+      - EditorContentAPI（内容接口）
+  /editor/content/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 编辑文件内容，Contents是内容数组，内容的字段，根据内容模型设置
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentEditParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑文件内容
+      tags:
+      - EditorContentAPI（内容接口）
+  /editor/content/export:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 文件名称
+        in: query
+        name: file
+        required: true
+        type: string
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.ContentExportParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 导出课程内容
+      tags:
+      - EditorContentAPI（内容接口）
+  /editor/content/export_list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 文件名称
+        in: query
+        name: file
+        required: true
+        type: string
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.ContentExportListParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 导出课程内容列表
+      tags:
+      - EditorContentAPI（内容接口）
+  /editor/content/import:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 文件名称
+        in: query
+        name: file
+        required: true
+        type: string
+      - description: parent_uuid
+        in: query
+        name: parent_uuid
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 导入文件内容
+      tags:
+      - EditorContentAPI（内容接口）
+  /editor/content/search:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 内容搜索
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.csp'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 内容搜索
+      tags:
+      - EditorContentAPI（内容接口）
+  /editor/content/showTypes:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取内容题型列表
+      tags:
+      - EditorContentAPI（内容接口）
+  /editor/content/version/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程内容添加,module是内容类型，现在有两个值：basic（基础内容）和levelGrade（等级测试内容）
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentAddParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 课程内容版本添加
+      tags:
+      - EditorContentVersionAPI（内容版本接口）
+  /editor/content/version/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程内容删除
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentDelParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 课程内容版本删除
+      tags:
+      - EditorContentVersionAPI（内容版本接口）
+  /editor/content/version/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程内容修改
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentEditParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 课程内容版本修改
+      tags:
+      - EditorContentVersionAPI（内容版本接口）
+  /editor/content/version/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程内容列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentListParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 课程内容版本列表
+      tags:
+      - EditorContentVersionAPI（内容版本接口）
+  /editor/content_reports/create:
+    post:
+      consumes:
+      - application/json
+      description: 添加课程内容反馈
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ContentReportsCreateRequests'
+      produces:
+      - application/jsonf
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加课程内容反馈
+      tags:
+      - 课程内容反馈接口
+  /editor/content_reports/delete:
+    post:
+      consumes:
+      - application/json
+      description: 删除课程内容反馈数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ContentReportsDeleteRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除课程内容反馈数据
+      tags:
+      - 课程内容反馈接口
+  /editor/content_reports/find:
+    post:
+      consumes:
+      - application/json
+      description: 查询课程内容反馈数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ContentReportsFindRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询课程内容反馈数据
+      tags:
+      - 课程内容反馈接口
+  /editor/content_reports/findone:
+    post:
+      consumes:
+      - application/json
+      description: 查询一条课程内容反馈数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ContentReportsFindOneRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.ContentReportsResponses'
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询一条课程内容反馈数据
+      tags:
+      - 课程内容反馈接口
+  /editor/content_reports/list:
+    post:
+      consumes:
+      - application/json
+      description: 查询课程内容反馈列表分页数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ContentReportsListRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.ContentReportsResponses'
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询课程内容反馈列表分页数据
+      tags:
+      - 课程内容反馈接口
+  /editor/content_reports/update:
+    post:
+      consumes:
+      - application/json
+      description: 更新课程内容反馈数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ContentReportsUpdateRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新课程内容反馈数据
+      tags:
+      - 课程内容反馈接口
+  /editor/contenttype/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 添加类型参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contenType'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加内容类型
+      tags:
+      - EditorContentTypeAPI(课程内容类型接口)
+  /editor/contenttype/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 删除内容类型参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentTypeDelParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除内容类型
+      tags:
+      - EditorContentTypeAPI(课程内容类型接口)
+  /editor/contenttype/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 添加类型参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contenType'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑内容类型
+      tags:
+      - EditorContentTypeAPI(课程内容类型接口)
+  /editor/contenttype/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.ListsParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取内容类型列表
+      tags:
+      - EditorContentTypeAPI(课程内容类型接口)
+  /editor/contenttype/listorder:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 排序参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentTypeListOrderInfos'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 内容类型排序
+      tags:
+      - EditorContentTypeAPI(课程内容类型接口)
+  /editor/course/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 添加课程
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.courseAddParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加课程
+      tags:
+      - EditorCourseAPI（课程接口）
+  /editor/course/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 删除课程
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.coruseDelParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除课程
+      tags:
+      - EditorCourseAPI（课程接口）
+  /editor/course/detail:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程编码
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.CourseGetDetailParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取小学英语课程详情
+      tags:
+      - EditorCourseAPI（课程接口）
+  /editor/course/detail/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程详情
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.CoursePriDetail'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑小学英语课程详情
+      tags:
+      - EditorCourseAPI（课程接口）
+  /editor/course/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 修改课程
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.courseEditParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 修改课程
+      tags:
+      - EditorCourseAPI（课程接口）
+  /editor/course/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.courseListParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 课程列表
+      tags:
+      - EditorCourseAPI（课程接口）
+  /editor/course/types:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 课程类型
+      tags:
+      - EditorCourseAPI（课程接口）
+  /editor/course/unlock:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.contentUnlockParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 课程解锁
+      tags:
+      - EditorCourseAPI（课程接口）
+  /editor/course_files/create_transcode:
+    post:
+      consumes:
+      - application/json
+      description: 创建文档转码任务
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.CourseFilesCreateTranscodeRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 创建文档转码任务
+      tags:
+      - 文档转码相关接口
+  /editor/course_files/delete_file:
+    post:
+      consumes:
+      - application/json
+      description: 文件转码列表
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.CourseFilesDeleteRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 文件转码列表
+      tags:
+      - 文档转码相关接口
+  /editor/course_files/describe_transcode:
+    post:
+      consumes:
+      - application/json
+      description: 查询文档转码任务
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.CourseFilesTranscodeRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询文档转码任务
+      tags:
+      - 文档转码相关接口
+  /editor/course_files/file_list:
+    post:
+      consumes:
+      - application/json
+      description: 文件转码列表
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.CourseFilesListRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.CourseFilesListResponse'
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 文件转码列表
+      tags:
+      - 文档转码相关接口
+  /editor/dict/del:
+    post:
+      consumes:
+      - application/json
+      description: 单词删除
+      parameters:
+      - description: 单词删除参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.DictDelRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 单词删除
+      tags:
+      - Dict（辞典接口）
+  /editor/dict/detail:
+    post:
+      consumes:
+      - application/json
+      description: 辞典详情
+      parameters:
+      - description: 辞典列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.DictDetailRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.DictResponse'
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 辞典详情
+      tags:
+      - Dict（辞典接口）
+  /editor/dict/list:
+    post:
+      consumes:
+      - application/json
+      description: 辞典列表
+      parameters:
+      - description: 辞典列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.DictListRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.DictResponse'
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 辞典列表
+      tags:
+      - Dict（辞典接口）
+  /editor/dict/offline:
+    post:
+      consumes:
+      - application/json
+      description: 辞典下线
+      parameters:
+      - description: 辞典下线参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.DictOnlineRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 辞典下线
+      tags:
+      - Dict（辞典接口）
+  /editor/dict/online:
+    post:
+      consumes:
+      - application/json
+      description: 辞典上线
+      parameters:
+      - description: 辞典上线参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.DictOnlineRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 辞典上线
+      tags:
+      - Dict（辞典接口）
+  /editor/dict/tags:
+    post:
+      consumes:
+      - application/json
+      description: 辞典Tags
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 辞典Tags
+      tags:
+      - Dict（辞典接口）
+  /editor/dict/update:
+    post:
+      consumes:
+      - application/json
+      description: 辞典更新
+      parameters:
+      - description: 辞典列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.DictUpdateRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 辞典更新
+      tags:
+      - Dict（辞典接口）
+  /editor/examin:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: '内容审核: 审核状态，0正在编辑，1提交审核，2审核通过，3审核没通过'
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.examinParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 审核接口
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/examin/reset:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 审核状态重置
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.examinSubmitParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 审核状态重置
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/examin/submit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 提交审核
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.examinSubmitParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 提交审核
+      tags:
+      - EditorCatalogAPI(目录接口)
+  /editor/image/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 图片添加
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.imageAddParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 图片添加
+      tags:
+      - EditorImageAPI （图片系统接口）
+  /editor/image/add/more:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 图片添加
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.imageAddMoreParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 图片添加
+      tags:
+      - EditorImageAPI （图片系统接口）
+  /editor/image/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 图片删除
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.imageDelParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 图片删除
+      tags:
+      - EditorImageAPI （图片系统接口）
+  /editor/image/download:
+    get:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 图片标签
+        in: formData
+        name: tagKey
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 图片信息下载
+      tags:
+      - EditorImageAPI （图片系统接口）
+  /editor/image/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 图片添加
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.imageEditParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 图片编辑
+      tags:
+      - EditorImageAPI （图片系统接口）
+  /editor/image/search:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 图片搜索参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.imageSearchParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 图片搜索
+      tags:
+      - EditorImageAPI （图片系统接口）
+  /editor/image/tag/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 图片标签添加
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.imageTagParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 图片标签添加
+      tags:
+      - EditorImageAPI （图片系统接口）
+  /editor/image/tag/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 图片标签添加
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.imageTagParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 图片标签删除
+      tags:
+      - EditorImageAPI （图片系统接口）
+  /editor/image/tags:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 图片标签列表
+      tags:
+      - EditorImageAPI （图片系统接口）
+  /editor/info/config:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取配置信息
+      tags:
+      - EditorInfoAPI（公共信息接口）
+  /editor/info/token:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取上传课程资料的七牛Token  , bucket:assets
+      tags:
+      - EditorInfoAPI（公共信息接口）
+  /editor/info/token/uploadfile:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取上传课程资料的七牛Token , bucket:uploadfile
+      tags:
+      - EditorInfoAPI（公共信息接口）
+  /editor/lang/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 语种信息
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.langPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加语种
+      tags:
+      - EditorLangAPI（语言种类接口）
+  /editor/lang/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 语种信息
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.langDelPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除语种信息
+      tags:
+      - EditorLangAPI（语言种类接口）
+  /editor/lang/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 语种信息
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.langEditPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"编辑成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑语种信息
+      tags:
+      - EditorLangAPI（语言种类接口）
+  /editor/lang/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 语种列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.ListsParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑器语种列表
+      tags:
+      - EditorLangAPI（语言种类接口）
+  /editor/logs/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 日志列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.ListsParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 日志列表
+      tags:
+      - EditorLogsAPI（日志接口）
+  /editor/model/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 模型信息
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.modelAddPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加模型
+      tags:
+      - EditorModelAPI（内容模型接口）
+  /editor/model/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 模型信息
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.modelDelPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除模型
+      tags:
+      - EditorModelAPI（内容模型接口）
+  /editor/model/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 语种信息
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.modelEditPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"编辑成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑语种信息
+      tags:
+      - EditorModelAPI（内容模型接口）
+  /editor/model/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 模型列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.modelListsParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 模型列表
+      tags:
+      - EditorModelAPI（内容模型接口）
+  /editor/online/courseInfo:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 课程编码数组：例如：[
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.onlineCourseCodes'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加课程信息上线任务
+      tags:
+      - EditorOnlineAPI（课程内容上线接口）
+  /editor/online/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 删除参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.jobDelParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除上线任务
+      tags:
+      - EditorOnlineAPI（课程内容上线接口）
+  /editor/online/job:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 要发布的目录或课程版本的uuid;上线类型：catalog/content_version
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.onlineJonParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加内容上线任务
+      tags:
+      - EditorOnlineAPI（课程内容上线接口）
+  /editor/online/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 上线任务列表:state:0(还没执行)，1（正在执行），2（执行完成）
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.ListsParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 上线任务列表
+      tags:
+      - EditorOnlineAPI（课程内容上线接口）
+  /editor/operate_log/details:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.OperateLogDetailsParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 日志操作详情
+      tags:
+      - EditorOnlineAPI（日志操作接口）
+  /editor/operate_log/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.OperateLogListParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 日志操作列表
+      tags:
+      - EditorOnlineAPI（日志操作接口）
+  /editor/operate_log/rollback:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.RollbackParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 日志操作回滚
+      tags:
+      - EditorOnlineAPI（日志操作接口）
+  /editor/qr_code/add:
+    post:
+      consumes:
+      - application/json
+      description: 添加二维码
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.QRcodeAddRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加二维码
+      tags:
+      - QRcodeAPI（二维码管理）
+  /editor/qr_code/delete:
+    post:
+      consumes:
+      - application/json
+      description: 删除二维码
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.QRcodeDeleteRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除二维码
+      tags:
+      - QRcodeAPI（二维码管理）
+  /editor/qr_code/details:
+    get:
+      consumes:
+      - application/json
+      description: 生成二维码
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.QRcodeDetailsRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 生成二维码
+      tags:
+      - QRcodeAPI（二维码管理）
+  /editor/qr_code/image:
+    post:
+      consumes:
+      - application/json
+      description: 生成二维码
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.QRcodeImageRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 生成二维码
+      tags:
+      - QRcodeAPI（二维码管理）
+  /editor/qr_code/list:
+    post:
+      consumes:
+      - application/json
+      description: 二维码列表
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.QRcodeListRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.TeacherResponse'
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 二维码列表
+      tags:
+      - QRcodeAPI（二维码管理）
+  /editor/qr_code/update:
+    post:
+      consumes:
+      - application/json
+      description: 更新二维码
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.QRcodeUpdateRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新二维码
+      tags:
+      - QRcodeAPI（二维码管理）
+  /editor/reports/create:
+    post:
+      consumes:
+      - application/json
+      description: 添加反馈
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ReportsCreateRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加反馈
+      tags:
+      - 反馈接口
+  /editor/reports/delete:
+    post:
+      consumes:
+      - application/json
+      description: 删除反馈数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ReportsDeleteRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除反馈数据
+      tags:
+      - 反馈接口
+  /editor/reports/find:
+    post:
+      consumes:
+      - application/json
+      description: 查询反馈数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ReportsFindRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询反馈数据
+      tags:
+      - 反馈接口
+  /editor/reports/findone:
+    post:
+      consumes:
+      - application/json
+      description: 查询一条反馈数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ReportsFindOneRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.ReportsResponses'
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询一条反馈数据
+      tags:
+      - 反馈接口
+  /editor/reports/list:
+    post:
+      consumes:
+      - application/json
+      description: 查询反馈列表分页数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ReportsListRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.ReportsResponses'
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 查询反馈列表分页数据
+      tags:
+      - 反馈接口
+  /editor/reports/update:
+    post:
+      consumes:
+      - application/json
+      description: 更新反馈数据
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.ReportsUpdateRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新反馈数据
+      tags:
+      - 反馈接口
+  /editor/sentence/detail:
+    post:
+      consumes:
+      - application/json
+      description: 句子详情
+      parameters:
+      - description: 辞典列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.DictDetailRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 句子详情
+      tags:
+      - Sentence（句子接口）
+  /editor/sentence/list:
+    post:
+      consumes:
+      - application/json
+      description: 句子列表
+      parameters:
+      - description: 句子参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.SentenceSearchRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 句子列表
+      tags:
+      - Sentence（句子接口）
+  /editor/sentence/update:
+    post:
+      consumes:
+      - application/json
+      description: 更新句子
+      parameters:
+      - description: 更新句子
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.SentenceUpdate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新句子
+      tags:
+      - Sentence（句子接口）
+  /editor/statistic/unlock_chapter:
+    post:
+      consumes:
+      - application/json
+      description: 添加统计Chapter
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.StatisticUnlockChapter'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加统计Chapter
+      tags:
+      - StatisticAPI（统计管理）
+  /editor/statistic/unlock_part:
+    post:
+      consumes:
+      - application/json
+      description: 添加统计Part
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.StatisticUnlockPart'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加统计Part
+      tags:
+      - StatisticAPI（统计管理）
+  /editor/sword/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 关键词
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.SearchWord'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加关键词
+      tags:
+      - EditorSearchWordAPI（搜索关键词接口）
+  /editor/sword/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 关键词
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.searchWordDelParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加关键词
+      tags:
+      - EditorSearchWordAPI（搜索关键词接口）
+  /editor/sword/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 关键词
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.SearchWord'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑关键词
+      tags:
+      - EditorSearchWordAPI（搜索关键词接口）
+  /editor/sword/list:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 搜索关键词列表
+      tags:
+      - EditorSearchWordAPI（搜索关键词接口）
+  /editor/sword/listorder:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 关键词
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.listOrdersPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 排序
+      tags:
+      - EditorSearchWordAPI（搜索关键词接口）
+  /editor/tag/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 标签信息
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editor.Content_tags'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加标签
+      tags:
+      - EditorTagAPI（标签接口）
+  /editor/tag/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 标签信息
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.tagsDelPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除标签信息
+      tags:
+      - EditorTagAPI（标签接口）
+  /editor/tag/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 标签信息
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editor.Content_tags'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加标签
+      tags:
+      - EditorTagAPI（标签接口）
+  /editor/tag/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 标签列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.tagsListsParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 标签列表
+      tags:
+      - EditorTagAPI（标签接口）
+  /editor/tag/types:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 标签类型列表
+      tags:
+      - EditorTagAPI（标签接口）
+  /editor/tag/types/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 标签类型数据结构
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.tagType'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 增加标签类型
+      tags:
+      - EditorTagAPI（标签接口）
+  /editor/teacher/audit:
+    post:
+      consumes:
+      - application/json
+      description: 审核教师信息
+      parameters:
+      - description: 参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.TeacherAuditRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":500,"data":{},"msg":"失败"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 审核教师信息
+      tags:
+      - EditorTeacherAPI（教师接口）
+  /editor/teacher/details:
+    post:
+      consumes:
+      - application/json
+      description: 获取教师信息详情
+      parameters:
+      - description: 参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.TeacherEditRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.TeacherResponse'
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取教师信息详情
+      tags:
+      - EditorTeacherAPI（教师接口）
+  /editor/teacher/list:
+    post:
+      consumes:
+      - application/json
+      description: 获取教师信息表
+      parameters:
+      - description: 列表参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/requests.TeacherListRequests'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.TeacherResponse'
+        "400":
+          description: '{"code":500,"data":{},"msg":"获取失败信息"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取教师信息列表
+      tags:
+      - EditorTeacherAPI（教师接口）
+  /fileUploadAndDownload/deleteFile:
+    post:
+      parameters:
+      - description: 传入文件里面id即可
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/dbModel.ExaFileUploadAndDownload'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"返回成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除文件
+      tags:
+      - ExaFileUploadAndDownload
+  /fileUploadAndDownload/getFileList:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 分页获取文件户列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/modelInterface.PageInfo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页文件列表
+      tags:
+      - ExaFileUploadAndDownload
+  /fileUploadAndDownload/upload:
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 上传文件示例
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"上传成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 上传文件示例
+      tags:
+      - ExaFileUploadAndDownload
+  /jwt/jsonInBlacklist:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"拉黑成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: jwt加入黑名单
+      tags:
+      - jwt
+  /live/add:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveAddParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"添加成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加直播
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/chatroom/comments:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播课程UUID
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.commentsParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取直播聊天室评论
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/chatroom/majia:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 直播评论马甲列表
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/chatroom/sendmsg:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 消息内容,UUID（直播课程的UUID），Role(角色，teacher,student),Coins 打赏金币
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.roomMsg'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 发送聊天室信息
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/comments_upload:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.ListOrderParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 上传评论
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/course/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveCourseEditPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 修改直播课程
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/course/offline:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveCoursePara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 结束直播
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/course/online:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveCoursePara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 开始直播
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/dbtest:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 数据库测试
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/del:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveDelPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除直播
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/edit:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveEditParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑直播
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/edit_list_order:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.ListOrderParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 编辑直播课顺序
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/gagadd:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.GagParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 添加禁言聊天室成员
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/gagremove:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.GagParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 移除禁言聊天室成员
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 分页参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.modelListsParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 直播房间列表
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/offline:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveDelPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 下架直播
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/online:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveDelPara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 上架直播
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/pushurl:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 直播数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveCoursePara'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取直播推流地址
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/send_live_common:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.ListOrderParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 发布评论数据
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/shareinfo:
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 课程编码
+        in: formData
+        name: courseCode
+        required: true
+        type: string
+      - description: 二维码跳转地址
+        in: formData
+        name: jumpUrl
+        required: true
+        type: string
+      - description: 分享标题
+        in: formData
+        name: shareTitle
+        required: true
+        type: string
+      - description: 分享描述
+        in: formData
+        name: shareDesc
+        required: true
+        type: string
+      - description: 分享海报图片地址，是个数组,可以上传多个
+        in: formData
+        name: sharePoster
+        required: true
+        type: string
+      - description: 二维码宽 px
+        in: formData
+        name: qrCodeX
+        required: true
+        type: integer
+      - description: 二维码高 px
+        in: formData
+        name: qrCodeY
+        required: true
+        type: integer
+      - description: 二维码左上角到背景图片左边的距离 px
+        in: formData
+        name: scaleX
+        required: true
+        type: integer
+      - description: 二维码左上角到背景图片上边的距离 px
+        in: formData
+        name: scaleY
+        required: true
+        type: integer
+      - description: 上传背景图片
+        in: formData
+        name: bgImg
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 上传分享背景图片信息
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/sub:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 订阅参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.liveSubParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 订阅直播课程
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/usercount:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求数据
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/editorapi.UserCountParam'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取直播在线人数数据
+      tags:
+      - LiveAPI（直播课程接口）
+  /live/wxtoken:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取微信token
+      tags:
+      - LiveAPI（直播课程接口）
+  /menu/addBaseMenu:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 新增菜单
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/sysModel.SysBaseMenu'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 新增菜单
+      tags:
+      - menu
+  /menu/addMenuAuthority:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 增加menu和角色关联关系
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.AuthorityIdInfo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取指定角色menu
+      tags:
+      - authorityAndMenu
+  /menu/deleteBaseMenu:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 删除菜单
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.IdInfo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除菜单
+      tags:
+      - menu
+  /menu/getBaseMenuById:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 根据id获取菜单
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.GetById'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 根据id获取菜单
+      tags:
+      - menu
+  /menu/getBaseMenuTree:
+    post:
+      parameters:
+      - description: 可以什么都不填
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.RegistAndLoginStuct'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"返回成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取用户动态路由
+      tags:
+      - authorityAndMenu
+  /menu/getMenu:
+    post:
+      parameters:
+      - description: 可以什么都不填
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.RegistAndLoginStuct'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"返回成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 获取用户动态路由
+      tags:
+      - authorityAndMenu
+  /menu/getMenuList:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 分页获取基础menu列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/modelInterface.PageInfo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取基础menu列表
+      tags:
+      - menu
+  /menu/updataBaseMen:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 更新菜单
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/sysModel.SysBaseMenu'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 更新菜单
+      tags:
+      - menu
+  /user/changePassword:
+    post:
+      parameters:
+      - description: 用户修改密码
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.ChangePasswordStutrc'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 用户修改密码
+      tags:
+      - SysUser
+  /user/getUserList:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 分页获取用户列表
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/modelInterface.PageInfo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"获取成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 分页获取用户列表
+      tags:
+      - SysUser
+  /user/remove:
+    post:
+      parameters:
+      - description: 用户名称
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.UserDeleteStutrc'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 删除用户
+      tags:
+      - SysUser
+  /user/setUserAuthority:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 设置用户权限
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/api.SetUserAuth'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"修改成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 设置用户权限
+      tags:
+      - SysUser
+  /user/uploadHeaderImg:
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 用户上传头像
+        in: formData
+        name: headerImg
+        required: true
+        type: file
+      - description: 用户上传头像
+        in: formData
+        name: username
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"上传成功"}'
+          schema:
+            type: string
+      security:
+      - ApiKeyAuth: []
+      summary: 用户上传头像
+      tags:
+      - SysUser
+  /workflow/createWorkFlow:
+    post:
+      parameters:
+      - description: 注册工作流接口
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/sysModel.SysWorkflow'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"注册成功"}'
+          schema:
+            type: string
+      summary: 注册工作流
+      tags:
+      - workflow
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: x-token
+    type: apiKey
+swagger: "2.0"
